@@ -1,7 +1,7 @@
 
-package lesson7;
+package lesson8;
 
-public abstract class Phone {
+public abstract class Phone implements Callable, Informable {
     private String number;
     private String model;
     private double weight;

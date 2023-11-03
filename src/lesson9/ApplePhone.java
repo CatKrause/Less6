@@ -1,6 +1,6 @@
-package lesson8;
+package lesson9;
 
-public class ApplePhone extends Phone implements Callable, Informable{
+public class ApplePhone extends Phone {
     private long iphoneNumber;
 
     public ApplePhone(long iphoneNumber, String model, double weight) {

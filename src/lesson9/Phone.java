@@ -1,12 +1,12 @@
 
-package lesson8;
+package lesson9;
 
-public abstract class Phone implements Callable, Informable {
-    private String number;
+public abstract class Phone<T> implements Callable<String>, Informable<String> {
+    private T number;
     private String model;
     private double weight;
 
-    public Phone(String number, String model, double weight) {
+    public Phone(T number, String model, double weight) {
         this.number = number;
         this.model = model;
         this.weight = weight;
@@ -21,7 +21,7 @@ public abstract class Phone implements Callable, Informable {
     public Phone() {
 
     }
-        public String getNumber() {
+        public T getNumber() {
             return number;
         }
 

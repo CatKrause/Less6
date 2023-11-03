@@ -1,13 +1,13 @@
-package lesson8;
+package lesson9;
 
 public class Main {
     public static void main(String[] args) {
-        SamsungPhone samsung = new SamsungPhone("+123456789", "Samsung S-150", 155.7);
+        Callable<String> samsung = new SamsungPhone("+123456789", "Samsung S-150", 155.7);
         samsung.receiveCall("Ли Бён Чхоль");
-        samsung.info2();
+        samsung.info();
         System.out.println();
 
-        Callable callable = new XiaomiPhone("+258965874", "Xiaomi pro super plus", 2.100);
+        Callable<String> callable = new XiaomiPhone(258965, "Xiaomi pro super plus", 2.100);
         callable.receiveCall("Лэй Цзюнь");
         callable.info();
         System.out.println();
@@ -15,6 +15,7 @@ public class Main {
         ApplePhone apple = new ApplePhone(880035535, "Iphone 17", 0.01);
         apple.receiveCall("Стив Джобс");
         apple.info();
+        apple.info2(35);
     }
 }
 

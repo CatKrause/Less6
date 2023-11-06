@@ -33,9 +33,16 @@ public abstract class Phone<T> implements Callable<String>, Informable<String> {
             return weight;
 
         }
-        public void receiveCall(String name){
-            System.out.println("Звонит " + name);
+
+    public void receiveCall(String name) throws NameException {
+        System.out.println("Звонит " + name);
+        if (name.length() < 4) {
+            throw new NameException("Недопустимое количество символов");
         }
+    }
+
+    public abstract void myException(int value) throws NameException;
+
 
         public abstract void info();
     }

@@ -6,8 +6,16 @@ public class XiaomiPhone extends Phone<Integer> implements Callable<String>, Inf
     }
 
     @Override
-    public void receiveCall(String name) {
+    public void receiveCall(String name) throws NameException {
         System.out.println("Звонит " + name);
+        if (name.length() < 4) {
+            throw new NameException("Недопустимое количество символов");
+        }
+    }
+
+    @Override
+    public void myException(int value) throws NameException {
+
     }
 
     @Override
